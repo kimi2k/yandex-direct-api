@@ -15,9 +15,9 @@ class YDirectApi
 	 */
 	public function __construct($ydLogin,$authToken,$applicationId) 
 	{
-		$this->login  = $ydLogin; //логин на которм крутится интересующий нас сервис
-		$this->token = $authToken; //авторизационный токен
-		$this->appId = $applicationId; //id - приложения
+		$this->login  = $ydLogin; //login
+		$this->token = $authToken; //authorize token
+		$this->appId = $applicationId; //id - application
 	}
 
 	/**
@@ -49,7 +49,7 @@ class YDirectApi
 		    'param'=> $this->param,
 		    'locale'=> 'ru',
 		);
-		// преобразование в JSON-формат
+		// convert to JSON
 		$request = json_encode($request);
 		$requestParams = array(
 		    'http'=>array(
